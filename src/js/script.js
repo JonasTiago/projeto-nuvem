@@ -29,3 +29,7 @@ document.getElementById('registerForm')?.addEventListener('submit', function(eve
         errorMessage.textContent = 'All fields are required';
     }
 });
+
+window.addEventListener('load', () => {
+    //...
+})
