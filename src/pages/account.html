@@ -28,19 +28,17 @@
             <h1>Junte-se a nós,<br>Crie hoje a sua conta!</h1>
 
             <div class="box-account">
-                <h2>informe seus dados</h2>
-                <input type="text" name="username" id="username" placeholder="apelido">
-                <input type="email" name="email" id="email" placeholder="e-mail">
-                <input type="email" name="cmail" id="cmail" placeholder="confirmar o e-mail">
-                <input type="password" name="password" id="password" placeholder="senha">
-                <input type="password" name="cpassword" id="cpassword" placeholder="confirmar a senha">
+                <form id="registerForm" data-form>
+                    <h2>informe seus dados</h2>
+                    <input type="text" id="name" name="name" placeholder="apelido" required data-name> 
+                    <input type="email" id="email" name="email" placeholder="e-mail" required data-email>
+                    <input type="email" name="email" id="email" placeholder="confirmar o e-mail" required data-email>
+                    <input type="password" id="password" name="password" placeholder="senha" required data-password>
+                    <input type="password" name="cpassword" id="cpassword" placeholder="confirmar a senha" required data-password>
+                    <button type="submit" id="button">Criar conta</button>
+                    <span id="error" class="error-message"></span>
+                </form>
 
-                <div class="check">
-                    <input type="checkbox" name="termo" id="termo" style="width: 13px; height: 13px;">
-                    <label for="termos" style="color: #3d3d3d;">li e aceito os termos</label>
-                </div>
-    
-                <button>Criar conta</button>
             </div>
         </div>
     </div>
@@ -84,5 +82,6 @@
             $('body').append(div)
         })
     </script>
+    <script type="module" src="../js/controllers/register-controller.js"></script>
 </body>
 </html>
