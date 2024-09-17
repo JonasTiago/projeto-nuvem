@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt=br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/media.css">
+
+    <!--JS & jQuery-->
+    <script type="text/javascript" src="../js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="container">
+    <div class="banner">
+        <img src="../images/login.png" alt="imagem-login">
+        <p style="color: #fff; font-weight: 600;">
+            Seja bem vindo, aproveite todo o conteúdo, estamos empenhados em
+            <br> trazer o melhor conteúdo direcionado a você.
+        </p>
+    </div>
+
+    <div class="box-login">
+        <h1>
+            Registre-se agora mesmo.
+        </h1>
+
+        <div class="box">
+            <h2>Preencha seus dados</h2>
+            <form id="loginForm" data-login>
+                <input type="text" id="name" name="name" placeholder="Nome" required data-name>
+                <input type="email" id="email" name="email" placeholder="E-mail" required data-email>
+                <input type="password" id="password" name="password" placeholder="Senha" required data-password>
+                <button type="submit" id="button">Criar conta</button>
+                <span id="error" class="error-message"></span>
+            </form>
+
+            <div class="social">
+                <img src="../images/facebook.png" alt="facebook">
+                <img src="../images/google.png" alt="google">
+                <img src="../images/twitter.png" alt="twitter">
+                <img src="../images/github.png" alt="github">
+            </div>
+        </div>
+    </div>
+</div>
+<script type="module" src="../js/controllers/register-controller.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>

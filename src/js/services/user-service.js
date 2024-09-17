@@ -5,16 +5,29 @@ const userLogin = async (email, password) => {
       email,
       password
     });
-   
+
     if (!user) {
       throw new Error('Usuario ou senha invalida');
     }
-  
-  
+
+
     return 200
   };
-  
+
+
+const register = async (name, email, password) => {
+    const user = await axios.post(`${UrlBase}/`, {
+    name,
+        email,
+        password
+});
+return 200
+};
+
+
+
 
 export const userServices = {
-    userLogin
+    userLogin,
+    register,
 };
