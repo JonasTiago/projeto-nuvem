@@ -31,3 +31,15 @@ export const userServices = {
     userLogin,
     register,
 };
+
+const updateUser = async (id, name) => {
+  const user = await axios.put(${UrlBase}/${id}, {
+    name
+  });
+
+  if (!user) {
+    throw new Error('');
+  }
+
+  return 200
+}
